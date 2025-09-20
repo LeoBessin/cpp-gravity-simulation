@@ -1,34 +1,43 @@
-﻿### C++ template
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
+﻿# --- Compilations ---
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
 *.so
-*.dylib
 *.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
+*.dylib
 *.a
 *.lib
-
-# Executables
-*.exe
 *.out
-*.app
+*.exe
 
+# --- Dossiers de build ---
+build/
+bin/
+dist/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# --- IDE ---
+# VSCode
+.vscode/
+# CLion / JetBrains
+.idea/
+cmake-build-*/
+# Visual Studio
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+Debug/
+Release/
+x64/
+x86/
+
+# --- Logs ---
+*.log
+
+# --- OS ---
+.DS_Store
+Thumbs.db
