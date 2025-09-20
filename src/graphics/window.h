@@ -12,16 +12,22 @@
 
 class Window {
 public:
-    Window(int width, int height, const std::string& title);
+    Window(int width, int height, const std::string &title);
+
     ~Window();
+
     bool shouldClose() const;
+
     void pollEvents() const;
+
     void swapBuffers() const;
+
     void clear() const;
+
     void setAspectOrtho(float left, float right, float bottom, float top, float nearVal, float farVal) const;
 
 private:
-    GLFWwindow* window;
+    GLFWwindow *window;
 };
 
 

@@ -4,12 +4,16 @@ project(cpp_gravity_simulation)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(cpp_gravity_simulation
-        main.cpp
-        main.h
-        window.cpp
-        window.h
-        circle.cpp
-        circle.h
+        src/main.cpp
+        src/main.h
+        src/graphics/window.cpp
+        src/graphics/window.h
+        src/graphics/draw.cpp
+        src/graphics/draw.h
+        src/core/ball.cpp
+        src/core/ball.h
+        src/core/constants.cpp
+        src/core/constants.h
 )
 
 find_package(glfw3 REQUIRED)
