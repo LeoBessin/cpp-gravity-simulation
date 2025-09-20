@@ -46,3 +46,24 @@ void Window::setAspectOrtho(const float left, const float right, const float bot
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 }
+
+bool Window::isMouseButtonPressed(const int button) const {
+    return glfwGetMouseButton(window, button) == GLFW_PRESS;
+}
+
+void Window::getMouseWorldPosition(float &worldX, float &worldY) const {
+    double mouseX, mouseY;
+    glfwGetCursorPos(window, &mouseX, &mouseY);
+
+    int width, height;
+    glfwGetWindowSize(window, &width, &height);
+
+    // Convertir les coordonnées de la souris en coordonnées du monde
+    worldX = static_cast<float>(mouseX) / width * 2.0f - 1.0f;
+    worldY = 1.0f - static_cast<float>(mouseY) / height * 2.0f;
+    worldX *= (static_cast<float>(width) / height); // Ajuster pour l'aspect ratio
+}
+
+void Window::changeTitle(const std::string &title) const {
+    glfwSetWindowTitle(window, title.c_str());
+}

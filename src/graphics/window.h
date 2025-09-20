@@ -24,6 +24,12 @@ public:
 
     void clear() const;
 
+    void changeTitle(const std::string &title) const;
+
+    bool isMouseButtonPressed(int button) const;
+
+    void getMouseWorldPosition(float &worldX, float &worldY) const;
+
     void setAspectOrtho(float left, float right, float bottom, float top, float nearVal, float farVal) const;
 
 private:
